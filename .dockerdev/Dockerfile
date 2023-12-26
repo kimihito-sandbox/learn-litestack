@@ -46,8 +46,8 @@ RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
   apt-get update && \
   DEBIAN_FRONTEND=noninteractive apt-get install -yq --no-install-recommends nodejs
 
-ARG YARN_VERSION=latest
-RUN npm install -g yarn@$YARN_VERSION
+ARG PNPM_VERSION=latest
+RUN npm install -g pnpm@$PNPM_VERSION
 
 # Application dependencies
 # We use an external Aptfile for this, stay tuned
